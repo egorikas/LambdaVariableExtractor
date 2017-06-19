@@ -2,11 +2,13 @@
 using System.Linq;
 using System.Reflection;
 
-namespace LambdaParser
+namespace LambdaVariableExtractor
 {
     public static class LambdaVariableExtractor
     {
-        public static TValue ExtractValue<TValue>(this Delegate lambda, string variableName)
+        public static TValue ExtractValue<TValue>(
+            this Delegate lambda, string variableName
+            )
             where TValue : class
         {
             if (lambda == null)
@@ -19,7 +21,7 @@ namespace LambdaParser
                     BindingFlags.Public |
                     BindingFlags.Static
                 )
-                .Single(x => x.Name == name);
+                .Single(x => x.Name == variableName);
 
             if (field == null)
                 throw new NullReferenceException("There isn't a variable with this name");

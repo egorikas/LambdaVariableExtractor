@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace LambdaParser
+namespace LambdaVariableExtractor
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             var thisIsClosure = "ThisIsClosure";
             Action actionWithClosure = () =>

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{712D2697-1CA0-474C-9CE7-4FFAE2FFAB13}</ProjectGuid>
+    <ProjectGuid>{3AB074B4-19AD-461A-B6F8-F188EB31913C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>LambdaParser</RootNamespace>
-    <AssemblyName>LambdaParser</AssemblyName>
+    <RootNamespace>LambdaVariableExtractor</RootNamespace>
+    <AssemblyName>LambdaVariableExtractor</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LambdaParser.cs" />
+    <Compile Include="LambdaVariableExtractor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
