@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("LambdaParser")]
+[assembly: AssemblyTitle("LambdaVariableExtractorTest")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("LambdaParser")]
+[assembly: AssemblyProduct("LambdaVariableExtractorTest")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("712d2697-1ca0-474c-9ce7-4ffae2ffab13")]
+[assembly: Guid("e4861cf0-df74-4349-8b72-2c2dd12ab040")]
 
 // Version information for an assembly consists of the following four values:
 //

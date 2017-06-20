@@ -2,12 +2,13 @@
 using System.Linq;
 using System.Reflection;
 
-namespace LambdaParser
+namespace LambdaVariableExtractor
 {
     public static class LambdaVariableExtractor
     {
-        public static TValue ExtractValue<TValue>(this Delegate lambda, string variableName)
-            where TValue : class
+        public static TValue ExtractValue<TValue>(
+            this Delegate lambda, string variableName
+        )
         {
             if (lambda == null)
                 throw new NullReferenceException("Empty lambda");
@@ -19,13 +20,16 @@ namespace LambdaParser
                     BindingFlags.Public |
                     BindingFlags.Static
                 )
-                .Single(x => x.Name == name);
+                .SingleOrDefault(x => x.Name == variableName);
 
             if (field == null)
                 throw new NullReferenceException("There isn't a variable with this name");
 
+            if (field.FieldType != typeof(TValue))
+                throw new ArgumentException(
+                    $"Wrong closure type. Expected - {typeof(TValue).FullName}. Actual - {field.FieldType.FullName}");
 
-            return field.GetValue(lambda.Target) as TValue;
+            return (TValue) field.GetValue(lambda.Target);
         }
     }
 }
