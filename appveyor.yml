@@ -1,0 +1,9 @@
+version: 0.1.{build}
+before_build:
+- cmd: cd src
+- cmd: nuget restore
+
+build:
+  project: src\LambdaVariableExtractor.sln
+  parallel: true
+  verbosity: minimal
