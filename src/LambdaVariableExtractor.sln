@@ -1,11 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.7
+VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LambdaVariableExtractor", "LambdaVariableExtractor\LambdaVariableExtractor.csproj", "{3AB074B4-19AD-461A-B6F8-F188EB31913C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LambdaVariableExtractorTest", "LambdaVariableExtractorTest\LambdaVariableExtractorTest.csproj", "{E4861CF0-DF74-4349-8B72-2C2DD12AB040}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D2C89BDD-B22F-4535-9020-AE087025835F}"
+	ProjectSection(SolutionItems) = preProject
+		.nuspec = .nuspec
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

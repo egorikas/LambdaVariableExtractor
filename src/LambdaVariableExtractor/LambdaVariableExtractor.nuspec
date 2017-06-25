@@ -6,6 +6,10 @@
 
     <!-- The package version number that is used when resolving dependencies -->
     <version>0.1.0.6</version>
+	
+	<packageTypes>
+        <packageType name="Dependency" />
+    </packageTypes>
 
     <!-- Authors contain text that appears directly on the gallery -->
     <authors>Egor Grishechko</authors>
@@ -37,4 +41,9 @@
 
     <!-- Dependencies are automatically installed when the package is installed -->
     </metadata>
+	
+	 <!--<files>
+    <file src="bin\Release\AppLogger.dll" target="lib\netstandard1.4\AppLogger.dll" />
+    <file src="bin\Release\AppLogger.xml" target="lib\netstandard1.4\AppLogger.xml" />
+</files>-->
 </package>
