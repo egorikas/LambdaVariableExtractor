@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+    <metadata>
+    <!-- The identifier that must be unique within the hosting gallery -->
+    <id>LambdaVariableExtractor</id>
+
+    <!-- The package version number that is used when resolving dependencies -->
+    <version>0.1.0.6</version>
+	
+	<packageTypes>
+        <packageType name="Dependency" />
+    </packageTypes>
+
+    <!-- Authors contain text that appears directly on the gallery -->
+    <authors>Egor Grishechko</authors>
+
+    <!-- Owners are typically nuget.org identities that allow gallery
+            users to easily find other packages by the same owners.  -->
+    <owners>egorikas</owners>
+
+    <!-- License and project URLs provide links for the gallery -->
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>https://github.com/egorikas/LambdaVariableExtractor</projectUrl>
+
+    <!-- If true, this value prompts the user to accept the license when
+            installing the package. -->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+
+    <!-- Any details about this particular release -->
+    <releaseNotes>First version of the library. Base functions</releaseNotes>
+
+    <!-- The description can be used in package manager UI. Note that the
+            nuget.org gallery uses information you add in the portal. -->
+    <description>Utility for extracting values from lambdas and delegates. Can be used for unit-testing</description>
+
+    <!-- Copyright information -->
+    <copyright>Copyright ©2017 Egor Grishechko</copyright>
+
+    <!-- Tags appear in the gallery and can be used for tag searches -->
+    <tags>unit-testing delegate lambda closure extract</tags>
+
+    <!-- Dependencies are automatically installed when the package is installed -->
+    </metadata>
+	
+	 <!--<files>
+    <file src="bin\Release\AppLogger.dll" target="lib\netstandard1.4\AppLogger.dll" />
+    <file src="bin\Release\AppLogger.xml" target="lib\netstandard1.4\AppLogger.xml" />
+</files>-->
+</package>
