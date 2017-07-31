@@ -33,4 +33,4 @@ Simple helper-method for extracting closure values from lambdas.
 ```
 
 ## .NET Standart compatibility
-I am going to port this libraty to .NET Standart 2.0 
+I am going to port this library to .NET Standart 2.0 
