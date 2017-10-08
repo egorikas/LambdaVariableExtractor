@@ -57,11 +57,5 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\LambdaVariableExtractor\LambdaVariableExtractor.csproj">
-      <Project>{3ab074b4-19ad-461a-b6f8-f188eb31913c}</Project>
-      <Name>LambdaVariableExtractor</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,12 +1,11 @@
 ﻿using System;
-using NUnit.Framework;
+using Xunit;
 
-namespace LambdaVariableExtractorTest
+namespace LambdaVariableExtractor.Test
 {
-    [TestFixture]
     public class ExtractValueTest
     {
-        [Test]
+        [Fact]
         public void ExtractValue_ActionWithVariable_Success()
         {
             //Arrange
@@ -20,10 +19,10 @@ namespace LambdaVariableExtractorTest
             var result = actionWithClosure.ExtractValue<string>("closure");
 
             //Assert
-            Assert.That(result, Is.EqualTo(closure));
+            Assert.Equal(closure, result);
         }
 
-        [Test]
+        [Fact]
         public void ExtractValue_ActionWithTwoVariables_FoundExpected()
         {
             //Arrange
@@ -41,10 +40,10 @@ namespace LambdaVariableExtractorTest
             var result = actionWithClosure.ExtractValue<string>("firstClosure");
 
             //Assert
-            Assert.That(result, Is.EqualTo(firstClosure));
+            Assert.Equal(firstClosure, result);
         }
 
-        [Test]
+        [Fact]
         public void ExtractValue_GenericActionWithVariable_Succes()
         {
             //Arrange
@@ -58,10 +57,10 @@ namespace LambdaVariableExtractorTest
             var result = actionWithClosure.ExtractValue<string>("closure");
 
             //Assert
-            Assert.That(result, Is.EqualTo(closure));
+            Assert.Equal(closure, result);
         }
 
-        [Test]
+        [Fact]
         public void ExtractValue_FuncWithVariable_Succes()
         {
             //Arrange
@@ -76,10 +75,10 @@ namespace LambdaVariableExtractorTest
             var result = funcWithClosure.ExtractValue<string>("closure");
 
             //Assert
-            Assert.That(result, Is.EqualTo(closure));
+            Assert.Equal(closure, result);
         }
 
-        [Test]
+        [Fact]
         public void ExtractValue_NullAction_ExceptionThrown()
         {
             //Arrange
@@ -87,10 +86,10 @@ namespace LambdaVariableExtractorTest
             //Act
             var result = Assert.Throws<NullReferenceException>(() => actionWithClosure.ExtractValue<string>("closure"));
             //Assert
-            Assert.That(result.Message, Is.EqualTo("Empty lambda"));
+            Assert.Equal("Empty lambda", result.Message);
         }
 
-        [Test]
+        [Fact]
         public void ExtractValue_ActionWithOutClosure_ExceptionThrown()
         {
             //Arrange
@@ -102,10 +101,10 @@ namespace LambdaVariableExtractorTest
             var result = Assert.Throws<NullReferenceException>(() => actionWithClosure.ExtractValue<string>("closure"));
 
             //Assert
-            Assert.That(result.Message, Is.EqualTo("There isn't a variable with this name"));
+            Assert.Equal("There isn't a variable with this name", result.Message);
         }
 
-        [Test]
+        [Fact]
         public void ExtractValue_WrongExpectedType_ExceptionThrown()
         {
             //Arrange
@@ -119,7 +118,7 @@ namespace LambdaVariableExtractorTest
             var result = Assert.Throws<ArgumentException>(() => actionWithClosure.ExtractValue<int>("closure"));
 
             //Assert
-            Assert.That(result.Message, Is.EqualTo("Wrong closure type. Expected - System.Int32. Actual - System.String"));
+            Assert.Equal("Wrong closure type. Expected - System.Int32. Actual - System.String", result.Message);
         }
     }
 }
